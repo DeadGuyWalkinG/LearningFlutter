@@ -13,24 +13,33 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue,
         appBar: AppBar(
-          title: Text("Hello my niggas"),
+          title: Text("hello"),
           elevation: 0,
+          backgroundColor: Colors.blueGrey,
+          leading: Icon(Icons.menu),
+          actions:[
+            IconButton(onPressed: () {}, icon: Icon(Icons.logout))
+          ]
         ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.circular(20),
+        body: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.green
+              ),
             ),
-            padding: EdgeInsets.all(25),
-            child: Icon(
-              Icons.access_alarm,
-              color: Colors.white,
-              size: 64,
-              )
-          ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.green[400]
+              ),
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.green[200]
+              ),
+            ),
+          ],
         )
       ),
       debugShowCheckedModeBanner: false,
