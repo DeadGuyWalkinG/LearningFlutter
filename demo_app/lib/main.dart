@@ -1,3 +1,7 @@
+import 'package:demo_app/pages/first_page.dart';
+import 'package:demo_app/pages/home_page.dart';
+import 'package:demo_app/pages/profile_page.dart';
+import 'package:demo_app/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,39 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.blue,
-        appBar: AppBar(
-          title: Text("hello"),
-          elevation: 0,
-          backgroundColor: Colors.blueGrey,
-          leading: Icon(Icons.menu),
-          actions:[
-            IconButton(onPressed: () {}, icon: Icon(Icons.logout))
-          ]
-        ),
-        body: Column(
-          children: [
-            Expanded(
-              child: Container(
-                color: Colors.green
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.green[400]
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.green[200]
-              ),
-            ),
-          ],
-        )
-      ),
       debugShowCheckedModeBanner: false,
+      home: FirstPage(),
+      routes: {
+        '/firstpage': (context) => FirstPage(),
+        '/homepage': (context) => HomePage(),
+        '/settingspage': (context) => SettingsPage(),
+        '/profilepage': (context) => ProfilePage()
+      },
     );
   }
 }
