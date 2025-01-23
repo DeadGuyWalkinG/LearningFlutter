@@ -7,8 +7,12 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Settings Page")
-      )
+        child: Container(
+            color: Colors.blueGrey,
+            width: 200,
+            height: 200,
+          ),
+      ),
     );
   }
 }

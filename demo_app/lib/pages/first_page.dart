@@ -41,7 +41,7 @@ class _FirstPageState extends State<FirstPage> {
             //drawer header place
             DrawerHeader(
               child: Icon(
-                Icons.favorite,
+                Icons.person,
                 size: 64,
               )
             ),
